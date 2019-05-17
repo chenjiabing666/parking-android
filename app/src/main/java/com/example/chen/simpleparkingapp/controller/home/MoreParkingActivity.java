@@ -2,6 +2,7 @@ package com.example.chen.simpleparkingapp.controller.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -52,14 +53,16 @@ public class MoreParkingActivity extends BaseActivity implements View.OnClickLis
         errView.findViewById(R.id.tvErrorView).setOnClickListener(this);
         findViewById(R.id.ll_title_left).setOnClickListener(this);
         TextView tvTitle = findViewById(R.id.tv_title_middle);
-        tvTitle.setText("推荐资源");
+        tvTitle.setText("推荐停车场");
         refreshLayout = findViewById(R.id.refreshLayout);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
         adapter = new ParkingListAdapter(mDatas);
         recyclerView.setAdapter(adapter);
 
+        //上拉刷新
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
@@ -68,6 +71,7 @@ public class MoreParkingActivity extends BaseActivity implements View.OnClickLis
             }
         });
 
+        //下拉加载更多
         refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
             @Override
             public void onLoadmore(RefreshLayout refreshlayout) {

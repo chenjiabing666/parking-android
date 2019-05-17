@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="horizontal"
-    android:padding="@dimen/dp_10">
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/ivIcon"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="总停车位：201个"
+            android:text="剩余停车位：201个"
             android:textColor="@color/c_3D3D3D"
             android:textSize="@dimen/sp_12" />
 

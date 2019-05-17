@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -107,7 +108,10 @@ public class RecommedFragment extends Fragment implements View.OnClickListener, 
         refreshLayout = rootView.findViewById(R.id.refreshLayout);
         refreshLayout.setEnableLoadmore(false);
         recyclerView = rootView.findViewById(R.id.recyclerView);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(activity, DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
         adapter = new ParkingListAdapter(mDatas);
+
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(activity));
 
