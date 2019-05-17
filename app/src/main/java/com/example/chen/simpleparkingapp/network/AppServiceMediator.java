@@ -34,7 +34,7 @@ public class AppServiceMediator extends ServiceMediator {
     public static final String SERVICE_EDIT_UAER_INFO = "modifyUserInfo";//修改个人资料
     public static final String SERVICE_MODIFY_USER = "modifyUser";
     public static final String SERVICE_GET_YEAR_VIP_LIST = "getYearVipList";//年费会员
-
+    public static final String GET_BLANCE = "getBlance";//余额
     //主页
     public static final String SERVICE_GET_HOME = "home";//主页
 
@@ -191,7 +191,7 @@ public class AppServiceMediator extends ServiceMediator {
         response.setOperatCode(AppRequestUrl.GET_USER_BY_ID);
 
         Map<String, String> params = new HashMap<>();
-        params.put("id", id);
+        params.put("userId", id);
         String requestStr = getRequestStr(params);
 
         NetworkResponse netResponse = NetworkAccess.httpRequest(AppRequestUrl.GET_USER_BY_ID, requestStr);
@@ -349,11 +349,16 @@ public class AppServiceMediator extends ServiceMediator {
         return response;
     }
 
-    public ServiceResponse<Home> home() {
+    @Field_Method_Parameter_Annotation(args = {"userId"})
+    public ServiceResponse<Home> home(String userId) {
         ServiceResponse<Home> response = new ServiceResponse<>();
         response.setOperatCode(AppRequestUrl.GET_HOME);
 
-        NetworkResponse netResponse = NetworkAccess.httpRequest(AppRequestUrl.GET_HOME, "");
+        HashMap<String, String> params = new HashMap<>();
+        params.put("userId", userId);
+        String requestData = getRequestStr(params);
+
+        NetworkResponse netResponse = NetworkAccess.httpRequest(AppRequestUrl.GET_HOME,requestData);
 
         String responseStr = ServiceUtils.getRequestResult(response, netResponse);
         if (response.getReturnCode() == ServiceMediator.Service_Return_Success) {

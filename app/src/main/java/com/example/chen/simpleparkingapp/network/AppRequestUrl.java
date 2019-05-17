@@ -12,6 +12,7 @@ public class AppRequestUrl extends RequestUrl {
     public static final String GET_USER_BY_ID = BASE_URL + "user/getUserById.do";//获取用户信息
     public static final String EDIT_PASSWORD = BASE_URL + "user/modifyPassword.do";//修改密码
     public static final String EDIT_USER_INFO = BASE_URL + "user/modifyUser.do";//修改个人信息
+    public static final String GET_BLANCE = BASE_URL + "user/getBlance.do";//余额
 
     //消息
     public static final String GET_MESSAGE_LIST = BASE_URL + "message/getMessageList.do";//消息列表

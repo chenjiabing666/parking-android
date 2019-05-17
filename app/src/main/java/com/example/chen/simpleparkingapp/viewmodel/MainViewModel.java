@@ -3,6 +3,7 @@ package com.example.chen.simpleparkingapp.viewmodel;
 import com.example.chen.simpleparkingapp.base.AppViewModel;
 import com.example.chen.simpleparkingapp.model.Home;
 import com.example.chen.simpleparkingapp.model.Parking;
+import com.example.chen.simpleparkingapp.model.User;
 import com.example.chen.simpleparkingapp.network.AppServiceMediator;
 import com.example.chen.taco.networkservice.ServiceResponse;
 import com.example.chen.taco.tasktool.TaskToken;
@@ -11,6 +12,7 @@ import java.util.List;
 
 public class MainViewModel extends AppViewModel {
     public Home home;
+    public User user;
     public List<Parking> nearList;
 
     @Override

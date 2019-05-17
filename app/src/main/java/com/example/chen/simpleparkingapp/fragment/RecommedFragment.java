@@ -22,6 +22,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.chen.simpleparkingapp.R;
 import com.example.chen.simpleparkingapp.adapter.HomeCornerImageBannerAdapter;
 import com.example.chen.simpleparkingapp.adapter.ParkingListAdapter;
+import com.example.chen.simpleparkingapp.base.UserCenter;
 import com.example.chen.simpleparkingapp.controller.MainActivity;
 import com.example.chen.simpleparkingapp.controller.home.MessageListActivity;
 import com.example.chen.simpleparkingapp.controller.home.MoreParkingActivity;
@@ -30,6 +31,7 @@ import com.example.chen.simpleparkingapp.controller.home.SearchActivity;
 import com.example.chen.simpleparkingapp.model.Banner;
 import com.example.chen.simpleparkingapp.model.Home;
 import com.example.chen.simpleparkingapp.model.Parking;
+import com.example.chen.simpleparkingapp.model.User;
 import com.example.chen.simpleparkingapp.network.AppServiceMediator;
 import com.example.chen.simpleparkingapp.view.widget.AlphaPageTransformer;
 import com.example.chen.simpleparkingapp.view.widget.ScaleInTransformer;
@@ -114,11 +116,13 @@ public class RecommedFragment extends Fragment implements View.OnClickListener, 
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(activity));
-
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
                 getHomeData();
+                //获取用户的信息，更新缓存
+//                getUserInfo();
+
             }
         });
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -131,6 +135,14 @@ public class RecommedFragment extends Fragment implements View.OnClickListener, 
         });
 
     }
+
+//    private void getUserInfo() {
+//        activity.showLodingDialog();
+//        HashMap<String, String> params = new HashMap<>();
+//        User user=UserCenter.getInstance().getUser();
+//        params.put("id",String.valueOf(user.getId()));
+//        activity.doTask(AppServiceMediator.SERVICE_GET_USER_INFO, params);
+//    }
 
     private void initBanner() {
         llIndicator.removeAllViews();
@@ -158,14 +170,30 @@ public class RecommedFragment extends Fragment implements View.OnClickListener, 
 
     @Override
     public void refreshData(TaskToken token, MainViewModel presentModel) {
+//        if (token.method.equals(AppServiceMediator.SERVICE_GET_USER_INFO)) {
+//            refreshLayout.finishRefresh();
+//            User user=presentModel.user;
+//            activity.dismissProgress();
+//            if (user != null) {
+//                errView.setVisibility(View.GONE);
+//                listView.setVisibility(View.VISIBLE);
+//                UserCenter.getInstance().setUser(user);
+//                System.out.println("blance：--------》"+user.getBalance());
+//            }
+//        }
+
         if (token.method.equals(AppServiceMediator.SERVICE_GET_HOME)) {
             refreshLayout.finishRefresh();
             Home home = presentModel.home;
             activity.dismissProgress();
+            System.out.println("---------------->");
             if (home != null) {
                 errView.setVisibility(View.GONE);
                 listView.setVisibility(View.VISIBLE);
                 List<Banner> tempBanner = home.getBanners();
+                User user=home.getUser();
+                UserCenter.getInstance().setUser(user);
+                System.out.println("----------------->"+user.getBalance());
                 banners.clear();
                 banners.addAll(tempBanner);
                 initBanner();
@@ -178,7 +206,9 @@ public class RecommedFragment extends Fragment implements View.OnClickListener, 
                 }
             }
         }
+
     }
+
 
     @Override
     public void requestFailedHandle(TaskToken token, int errorCode, String errorMsg) {
@@ -234,6 +264,8 @@ public class RecommedFragment extends Fragment implements View.OnClickListener, 
     private void getHomeData() {
         activity.showLodingDialog();
         HashMap<String, String> params = new HashMap<>();
+        User user=UserCenter.getInstance().getUser();
+        params.put("userId",user.getId()+"");
         activity.doTask(AppServiceMediator.SERVICE_GET_HOME, params);
     }
 

@@ -24,10 +24,11 @@ import com.example.chen.simpleparkingapp.controller.mine.VIPManagerActivity;
 import com.example.chen.simpleparkingapp.model.User;
 import com.example.chen.simpleparkingapp.view.widget.RoundCornersImageView;
 import com.example.chen.taco.mvvm.Route;
+import com.google.gson.Gson;
 
 public class MineFragment extends Fragment implements View.OnClickListener {
 
-    public static boolean isEdit = false;
+    public static boolean isEdit = true;
     private View rootView;
     private MainActivity activity;
     private RoundCornersImageView rvIcon;
@@ -47,6 +48,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         activity = (MainActivity) getActivity();
         initView();
         user = UserCenter.getInstance().getUser();
+        System.out.println("---------------------------------------------->"+user.getBalance());
         initData();
     }
 
@@ -56,7 +58,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         if (isEdit) {
             user = UserCenter.getInstance().getUser();
             initData();
-            isEdit = false;
+//            isEdit = false;
         }
     }
 
@@ -74,6 +76,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         tvName.setText(name);
         if (user.getBalance() != null) {
             tvBalance.setText("余额：" + user.getBalance());
+            System.out.println("余额：" + user.getBalance());
         } else {
             tvBalance.setText("余额：0");
         }

@@ -7,6 +7,16 @@ public class Home {
 
     private List<Banner> banners;
 
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public List<Parking> getParkings() {
         return parkings;
     }
