@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_set_psw"
+        layout="@layout/title_login" />
+
+    <ImageView
+        android:layout_width="@dimen/d_69dp"
+        android:layout_height="@dimen/d_69dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_43dp"
+        android:src="@drawable/icon_logo" />
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_set_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_18dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/white"
+        android:hint="输入密码"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:paddingLeft="@dimen/d_9dp"
+        android:paddingTop="@dimen/d_15dp"
+        android:paddingRight="@dimen/d_9dp"
+        android:paddingBottom="@dimen/d_15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/sp_14"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/white"
+        android:hint="再次输入密码"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:paddingLeft="@dimen/d_9dp"
+        android:paddingTop="@dimen/d_15dp"
+        android:paddingRight="@dimen/d_9dp"
+        android:paddingBottom="@dimen/d_15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_38dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@drawable/shape_00c188_corner_25"
+        android:text="立即注册"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

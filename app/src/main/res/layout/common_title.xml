@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:background="@color/white"
+    android:paddingTop="22dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/d_15dp">
+
+            <ImageView
+                android:id="@+id/iv_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/icon_black_back"/>
+
+            <TextView
+                android:id="@+id/tv_title_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="名称"
+                android:layout_marginLeft="@dimen/d_15dp"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/s_18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_title_right"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d_15dp"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/c_909090"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

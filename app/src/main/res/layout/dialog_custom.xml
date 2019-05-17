@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/d_13dp"
+    android:background="@drawable/shape_white_solid_5_corners"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_120dp"
+        android:background="@color/colortransparent"
+        android:gravity="center"
+        android:text="title"
+        android:textColor="@color/c_3D3D3D"
+        android:textSize="@dimen/sp_16"
+        android:id="@+id/tvTitle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_cancle_bg"
+            android:text="取消"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_confirm_bg"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+</LinearLayout>

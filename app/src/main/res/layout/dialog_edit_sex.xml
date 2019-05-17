@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d_183dp"
+    android:layout_margin="@dimen/d_15dp"
+    android:background="@drawable/shape_white_solid_5_corners"
+    android:layout_gravity="bottom|center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_139dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_25dp"
+            android:layout_marginBottom="@dimen/dp_25dp"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_gender"
+                android:textColor="@color/selector_gender_color"
+                android:textSize="@dimen/sp_16"
+                android:background="@null"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_10"
+                android:text="男" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:drawableLeft="@drawable/selector_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textColor="@color/selector_gender_color"
+                android:textSize="@dimen/sp_16"
+                android:background="@null"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_10"
+                android:text="女" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_click_zone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dialog_cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/theme_color"
+            android:background="@drawable/shape_cancle_bg"
+            android:text="取消"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/dialog_confirm_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_confirm_bg"
+            android:text="确定"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+
+</RelativeLayout>

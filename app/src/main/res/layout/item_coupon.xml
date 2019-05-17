@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginBottom="@dimen/d_5dp"
+    android:layout_marginLeft="@dimen/d_15dp"
+    android:layout_marginRight="@dimen/d_15dp"
+    android:layout_marginTop="@dimen/d_5dp"
+    android:background="@drawable/shape_ffffff_corner_10"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥266" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_1dp"
+            android:text="优惠券"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCoupon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="星汇大厦满100元"
+            android:textColor="@color/c_333333"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginRight="@dimen/d_5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvUserNow" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCoupon"
+            android:layout_marginTop="@dimen/d_5dp"
+            android:text="到期时间：2019-4-4"
+            android:textColor="@color/c_ff7417"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoupon" />
+
+        <TextView
+            android:id="@+id/tvUserNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_ff7f17_ff1100_corners_15"
+            android:paddingBottom="@dimen/d_5dp"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/d_5dp"
+            android:text="立即使用"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_10"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

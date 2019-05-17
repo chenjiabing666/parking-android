@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <ImageView
+        android:id="@+id/ivCodeBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_12dp"
+        android:src="@drawable/icon_code_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.chen.simpleparkingapp.view.widget.CircleImageView
+        android:id="@+id/ivWalletLogo"
+        android:layout_width="45dp"
+        android:layout_height="@dimen/d_45dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="@+id/ivCodeBg"
+        app:layout_constraintRight_toRightOf="@+id/ivCodeBg" />
+
+    <TextView
+        android:id="@+id/tvWalletName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:text="停车吗"
+        android:textColor="@color/c_3D3D3D"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintLeft_toLeftOf="@+id/ivCodeBg"
+        app:layout_constraintRight_toRightOf="@+id/ivCodeBg"
+        app:layout_constraintTop_toBottomOf="@+id/ivWalletLogo" />
+
+    <ImageView
+        android:id="@+id/iv_er_weima"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/d_61dp"
+        android:layout_marginLeft="@dimen/d_50dp"
+        android:layout_marginRight="@dimen/d_50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/load_img_err"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCodeBg"
+        app:layout_constraintLeft_toLeftOf="@+id/ivCodeBg"
+        app:layout_constraintRight_toRightOf="@+id/ivCodeBg"
+        app:layout_constraintTop_toBottomOf="@+id/tvWalletName" />
+
+    <TextView
+        android:id="@+id/tvRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/default_ptr_rotate"
+        android:layout_marginTop="@dimen/d_5dp"
+        android:drawablePadding="@dimen/dp_3"
+        android:text="点击刷新二维码"
+        android:textColor="@color/c_909090"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_er_weima"
+        app:layout_constraintRight_toRightOf="@+id/iv_er_weima"
+        app:layout_constraintTop_toBottomOf="@+id/iv_er_weima" />
+
+
+</android.support.constraint.ConstraintLayout>

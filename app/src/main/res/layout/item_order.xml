@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <com.example.chen.simpleparkingapp.view.widget.RoundCornersImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/load_img_err"
+        app:corner="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/d_5dp">
+
+        <TextView
+            android:id="@+id/tvParking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d_3dp"
+            android:text="星汇大厦停车场"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/d_3dp"
+            android:singleLine="true"
+            android:text="订单编号：000000000000000012"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="时间：2012/11/12 20:99:00"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="总计：0元"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/tvDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/dp_3"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_3"
+            android:src="@drawable/code" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_22000000_corner_10"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_3"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_3"
+        android:text="12月28日 13:24"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s_10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_15dp"
+        android:layout_marginRight="@dimen/d_15dp"
+        android:layout_marginTop="@dimen/d_5dp"
+        android:background="@drawable/shape_white_solid_10_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d_15dp"
+            android:text="系统消息"
+            android:textColor="@color/c_C6C6C6"
+            android:textSize="@dimen/sp_12" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d_15dp"
+            android:text="123455"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/tvLook"
+            android:layout_width="@dimen/d_60dp"
+            android:layout_height="@dimen/d_18dp"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/d_15dp"
+            android:background="@drawable/shape_theme_solid_2_corners"
+            android:gravity="center"
+            android:text="查看"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/s_10sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

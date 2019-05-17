@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_et_psw"
+        layout="@layout/common_title" />
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_current_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_65dp"
+        android:background="@color/white"
+        android:hint="输入当前密码"
+        android:inputType="textPassword"
+        android:paddingBottom="@dimen/d_15dp"
+        android:paddingLeft="@dimen/d_12dp"
+        android:paddingRight="@dimen/d_12dp"
+        android:paddingTop="@dimen/d_15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_new_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_13dp"
+        android:background="@color/white"
+        android:hint="输入新密码"
+        android:inputType="textPassword"
+        android:paddingBottom="@dimen/d_15dp"
+        android:paddingLeft="@dimen/d_12dp"
+        android:paddingRight="@dimen/d_12dp"
+        android:paddingTop="@dimen/d_15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_confirm_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_13dp"
+        android:background="@color/white"
+        android:hint="再次输入新密码"
+        android:inputType="textPassword"
+        android:paddingBottom="@dimen/d_15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="@dimen/d_15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50dp"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/d_60dp"
+        android:background="@drawable/shape_00c188_corner_5"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

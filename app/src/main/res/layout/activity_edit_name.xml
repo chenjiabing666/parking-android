@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/edit_person_name_title"
+        layout="@layout/common_title" />
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50dp"
+        android:layout_marginLeft="@dimen/d_35dp"
+        android:layout_marginRight="@dimen/d_27dp"
+        android:layout_marginTop="@dimen/d_45dp"
+        android:background="@drawable/shape_f7f7f7_corner_4"
+        android:hint="输入昵称..."
+        android:maxLength="8"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:singleLine="true"
+        android:textColor="@color/c_333333"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_48dp"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/d_50dp"
+        android:background="@drawable/shape_00c188_corner_5"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

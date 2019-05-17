@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/register_title"
+        layout="@layout/title_login" />
+
+    <ImageView
+        android:layout_width="@dimen/d_69dp"
+        android:layout_height="@dimen/d_69dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_43dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.example.chen.simpleparkingapp.view.widget.ClearWriteEditText
+        android:id="@+id/et_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_48dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_18dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/white"
+        android:digits="@string/txt"
+        android:hint="@string/phone"
+        android:paddingLeft="@dimen/d_9dp"
+        android:paddingRight="@dimen/d_9dp"
+        android:singleLine="true"
+        android:textColor="@color/titleColor"
+        android:textColorHint="@color/c_C6C6C6"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_48dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_14dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_48dp"
+            android:layout_marginRight="@dimen/d_48dp"
+            android:background="@null"
+            android:hint="输入验证码"
+            android:inputType="textPassword"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/d_9dp"
+            android:singleLine="true"
+            android:textColorHint="@color/c_C6C6C6"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_get_code"
+            android:layout_width="@dimen/d_48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="获取"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_1dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@color/list_divider" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_48dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_30dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@drawable/shape_00c188_corner_25"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="注册即代表同意本平台"
+            android:textColor="@color/c_909090"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_user_need_know"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="《用户须知》"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+</LinearLayout>

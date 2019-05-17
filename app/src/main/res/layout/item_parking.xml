@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/load_img_err" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/d_5dp">
+
+        <TextView
+            android:id="@+id/tvParking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d_3dp"
+            android:text="星汇大厦停车场"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/d_3dp"
+            android:singleLine="true"
+            android:text="地址：上海市松江区九亭镇"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="总停车位：201个"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="价格：2元/分钟"
+            android:textColor="@color/c_3D3D3D"
+            android:textSize="@dimen/sp_12" />
+
+    </RelativeLayout>
+
+</LinearLayout>

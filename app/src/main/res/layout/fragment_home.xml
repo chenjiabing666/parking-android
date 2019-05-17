@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/d_25dp">
+
+    <include layout="@layout/title_home" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/dp_11"
+            android:paddingTop="@dimen/dp_11"
+            android:text="推荐"
+            android:textColor="@color/selector_tab"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/dp_11"
+            android:paddingTop="@dimen/dp_11"
+            android:text="附近"
+            android:textColor="@color/selector_tab"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_green_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_3"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/sliding_thumb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/d_22dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_00c188_corner_5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

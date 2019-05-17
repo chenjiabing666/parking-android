@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<Environment>SIT</Environment>
+	<!-- 推送消息服务器地址 -->
+	<MessageRouteURL>
+	    
+	</MessageRouteURL>	
+	<!-- OpenAPI相关地址 -->
+	<VenusURL>
+
+	</VenusURL>
+	<!-- 服务地址 -->
+	<ServerURL>
+	</ServerURL>
+	<!-- 头像上传服务器地址 -->
+	<FileServerURL>
+	</FileServerURL>
+	<!-- 支付服务器地址 -->
+	<PMFURL>
+	</PMFURL>
+	<!-- 信息搜集 -->
+	<TrackingId>
+	</TrackingId>
+</xml>
