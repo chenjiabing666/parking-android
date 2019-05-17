@@ -34,6 +34,6 @@ public class NearbyAdapter extends BaseQuickAdapter<Parking, BaseViewHolder> {
         if (item.getMoney() != null) {
             helper.setText(R.id.tvPrice, "价格：" + item.getMoney() + "元/分钟");
         }
-        helper.setText(R.id.tvCount, "总停车位：" + item.getLeaveCount() + "个");
+        helper.setText(R.id.tvCount, "剩余停车位：" + item.getLeaveCount() + "个");
     }
 }
