@@ -49,7 +49,7 @@ public class NearbyFragment extends Fragment implements MainActivity.RefreshData
     private MainActivity activity;
     private View rootView;
     private double longitude;//经度
-    private double latitude;//维度
+    private double latitude;//纬度
     private SmartRefreshLayout refreshLayout;
     private RecyclerView recyclerView;
     private BaseQuickAdapter adapter;
