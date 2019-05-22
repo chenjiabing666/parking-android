@@ -21,6 +21,9 @@ import com.example.chen.taco.utils.ToastUtils;
 
 import java.util.HashMap;
 
+/**
+ * 订单详情页面
+ */
 public class OrderDetailActivity extends BaseActivity implements View.OnClickListener {
 
     private final int SELECT_COUPON = 0x110;//选择优惠券
@@ -42,6 +45,7 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_detail);
+        //获取intent传递过来的数据
         type = getIntent().getIntExtra(TITLE_TYPE, 0);
         orderType = getIntent().getIntExtra("type", 0);
         orderId = getIntent().getIntExtra(ORDER_ID, 0);
@@ -160,6 +164,7 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
         }
     }
 
+    //初始化订单，设置状态
     private void initOrder() {
         if (order != null) {
             if (order.getStatus() != null) {

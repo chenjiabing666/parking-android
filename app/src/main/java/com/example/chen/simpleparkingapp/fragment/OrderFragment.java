@@ -39,6 +39,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 我的订单的页面
+ */
 public class OrderFragment extends Fragment implements MyOrderActivity.RefreshListener, View.OnClickListener, CodeDialog.OnRefreshClickListener {
 
     public static final int ORDER = 0x122;//订单
@@ -129,6 +132,7 @@ public class OrderFragment extends Fragment implements MyOrderActivity.RefreshLi
         });
     }
 
+    //获取订单列表
     public void getOrderListForeground(BaseFragmentActivity activity, int beforePager, int state) {
         activity.showLodingDialog();
         if (user == null) {

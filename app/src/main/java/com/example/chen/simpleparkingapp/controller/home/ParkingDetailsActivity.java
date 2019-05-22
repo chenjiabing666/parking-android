@@ -35,6 +35,7 @@ public class ParkingDetailsActivity extends BaseActivity implements View.OnClick
     public static String PARKING_ID = "parkingId";
     private int parkingId;
     private List<String> banners = new ArrayList<>();
+    //轮播图片使用Banner
     private Banner banner;
     private TextView tvAddress, tvCount, tvCall, tvPrice, tvPreview, tvYearPrice;
     private TimePickerView startTimePv, endTimePv;
@@ -100,6 +101,7 @@ public class ParkingDetailsActivity extends BaseActivity implements View.OnClick
                     for (int i = 0; i < images.size(); i++) {
                         banners.add(images.get(i).getUrl());
                     }
+                    //设置轮播的图片，并且设置图片加载器ImageLoader
                     banner.setImages(banners)
                             .setImageLoader(new GlideImageLoader())
                             .start();
