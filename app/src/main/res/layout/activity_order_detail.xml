@@ -103,17 +103,18 @@
         android:textColor="@color/white"
         android:textSize="@dimen/sp_16" />
 
-    <!--<Button-->
-        <!--android:id="@+id/btn_more"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="@dimen/d_48dp"-->
-        <!--android:layout_marginLeft="@dimen/d_45dp"-->
-        <!--android:layout_marginTop="@dimen/d_30dp"-->
-        <!--android:layout_marginRight="@dimen/d_45dp"-->
-        <!--android:background="@drawable/shape_00c188_corner_25"-->
-        <!--android:text="再次预约"-->
-        <!--android:textColor="@color/white"-->
-        <!--android:textSize="@dimen/sp_16" />-->
+    <Button
+        android:id="@+id/btn_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_48dp"
+        android:layout_marginLeft="@dimen/d_45dp"
+        android:layout_marginTop="@dimen/d_30dp"
+        android:layout_marginRight="@dimen/d_45dp"
+        android:background="@drawable/shape_00c188_corner_25"
+        android:text="再次预约"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="@dimen/sp_16" />
 
     <Button
         android:id="@+id/btnCancle"

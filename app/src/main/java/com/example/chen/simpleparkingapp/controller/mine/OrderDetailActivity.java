@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.chen.simpleparkingapp.R;
+import com.example.chen.simpleparkingapp.controller.home.ParkingDetailsActivity;
 import com.example.chen.simpleparkingapp.model.Order;
 import com.example.chen.simpleparkingapp.network.AppServiceMediator;
 import com.example.chen.simpleparkingapp.viewmodel.OrderViewModel;
@@ -36,7 +37,7 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
     private int couponId = 0;//优惠券id
     private int position;//订单列表的位置
     private Order order;
-    private Button btnCancle, btnPay, btnSelectCoupon;
+    private Button btnCancle, btnPay, btnSelectCoupon,btnMore;
     private ImageView ivIcon;
     private TextView tvNumber, tvPrice, tvStartTime, tvEndTime, tvParking;
     private int orderType;
@@ -77,6 +78,8 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
         btnCancle.setVisibility(View.GONE);
         btnPay.setVisibility(View.GONE);
         btnSelectCoupon.setVisibility(View.GONE);
+        btnMore=findViewById(R.id.btn_more);
+        btnMore.setOnClickListener(this);
     }
 
     @Override
@@ -101,6 +104,11 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
                 Intent intent = new Intent(this, GetCouponByOrderIdActivity.class);
                 intent.putExtra(ORDER_ID, orderId);
                 Route.route().nextControllerWithIntent(this, GetCouponByOrderIdActivity.class.getName(), SELECT_COUPON, intent);
+                break;
+            case R.id.btn_more://再次预约
+                Intent intent1 = new Intent(this, ParkingDetailsActivity.class);
+                intent1.putExtra(ParkingDetailsActivity.PARKING_ID, order.getParkingId());
+                Route.route().nextControllerWithIntent(this, ParkingDetailsActivity.class.getName(), Route.WITHOUT_RESULTCODE,intent1);
                 break;
         }
     }
@@ -170,9 +178,14 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
             if (order.getStatus() != null) {
                 if (order.getStatus() == 1) {//已预约可以取消
                     btnCancle.setVisibility(View.VISIBLE);
+//                    btnMore.setVisibility(View.VISIBLE);
                 } else if (order.getStatus() == 3) {//待付款
                     btnSelectCoupon.setVisibility(View.VISIBLE);
                     btnPay.setVisibility(View.VISIBLE);
+                }else if (order.getStatus() == 4) {//已经完成的订单
+                    btnMore.setVisibility(View.VISIBLE);
+                }else if (order.getStatus() == 2) {//已取消的订单
+                    btnMore.setVisibility(View.VISIBLE);
                 }
             }
 
